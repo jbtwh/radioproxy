@@ -9,6 +9,7 @@
       [compojure.handler :refer [site]]
       [compojure.route :as route]
       [ring.adapter.jetty :as jetty]
+      [clojure.tools.nrepl.server :refer [start-server stop-server]]
       [environ.core :refer [env]]
       [clojure.java.io :refer [file output-stream input-stream resource]]
       )
@@ -39,16 +40,16 @@
       )
 
 (defn notfound
-      [request]
+      []
       {:status  404
        :headers {"Content-Type" "text/plain"}
-       :body :body "Hello from Heroku"})
+       :body "Hello from Heroku"})
 
 (defroutes app
            (GET "/splash" request
              (splash request))
            (ANY "*" request
-             (notfound request)))
+             (notfound)))
 
 
 ;;(future (start-server :port 7888 :bind "0.0.0.0"))
