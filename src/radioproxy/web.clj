@@ -43,7 +43,7 @@
       [request]
       {:status  404
        :headers {"Content-Type" "text/plain"}
-       :body (pr-str ["NOT FOUND 404" :from 'Heroku])})
+       :body :body "Hello from Heroku"})
 
 (defroutes app
            (GET "/splash" request
