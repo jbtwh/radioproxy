@@ -9,7 +9,6 @@
       [compojure.handler :refer [site]]
       [compojure.route :as route]
       [ring.adapter.jetty :as jetty]
-      [clojure.tools.nrepl.server :refer [start-server stop-server]]
       [environ.core :refer [env]]
       [clojure.java.io :refer [file output-stream input-stream resource]]
       )
