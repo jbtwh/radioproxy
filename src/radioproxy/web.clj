@@ -1,4 +1,4 @@
-(ns web
+(ns radioproxy.web
     (:gen-class)
     (:import [java.io InputStream InputStreamReader BufferedReader]
       [java.net URL HttpURLConnection Proxy InetSocketAddress Proxy$Type]
